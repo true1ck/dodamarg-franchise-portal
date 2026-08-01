@@ -14,10 +14,10 @@ Static bilingual research portal for the Dodamarg, Sindhudurg small-town franchi
 Because browsers restrict `fetch()` from `file://` URLs, serve the folder with any static server:
 
 ```bash
-python3 -m http.server 8000
+python3 -m http.server 49173
 ```
 
-Then open <http://localhost:8000>.
+Then open <http://localhost:49173>.
 
 ## GitHub Pages
 
