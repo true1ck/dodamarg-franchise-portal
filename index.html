@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Dodamarg franchise and small-town business investment plan with current verification notes.">
+  <title>Dodamarg Franchise &amp; Business Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
+  <style>
+    :root { --ink:#17231f; --muted:#5d6b65; --paper:#fbfaf6; --panel:#fff; --line:#dce5df; --green:#1e5b49; --mint:#e8f2ec; --orange:#b35a2d; --shadow:0 18px 50px rgba(21,49,38,.09); }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; color:var(--ink); background:var(--paper); font:16px/1.6 "DM Sans",system-ui,sans-serif; }
+    a { color:var(--green); }
+    .shell { width:min(1160px, calc(100% - 32px)); margin:auto; }
+    header { background:linear-gradient(135deg,#173f35 0%,#1e5b49 58%,#4a8068 100%); color:#fff; padding:18px 0 66px; }
+    nav { display:flex; justify-content:space-between; align-items:center; gap:20px; }
+    .brand { color:#fff; text-decoration:none; font-weight:700; letter-spacing:.02em; }
+    .lang-switch { display:flex; gap:4px; padding:4px; border:1px solid rgba(255,255,255,.28); border-radius:99px; }
+    .lang-switch button { border:0; border-radius:99px; background:transparent; color:#e6f3ed; padding:7px 13px; cursor:pointer; font:600 13px inherit; }
+    .lang-switch button.active, .lang-switch button:hover { color:var(--green); background:#fff; }
+    .hero { display:grid; grid-template-columns:1.35fr .65fr; gap:42px; align-items:end; margin-top:64px; }
+    h1,h2,h3 { font-family:"Source Serif 4",Georgia,serif; line-height:1.15; }
+    h1 { font-size:clamp(2.5rem,6vw,5.2rem); letter-spacing:-.05em; margin:0 0 18px; max-width:780px; }
+    .hero p { max-width:700px; color:#d6e8de; font-size:1.08rem; }
+    .hero-card { background:#f4f8f4; color:var(--ink); border-radius:20px; padding:24px; box-shadow:var(--shadow); }
+    .hero-card strong { display:block; color:var(--green); font-size:2rem; line-height:1; margin-bottom:6px; }
+    main { padding:42px 0 80px; }
+    .toolbar { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:16px; margin-bottom:28px; }
+    .toolbar a { text-decoration:none; font-weight:600; }
+    .translation-note { color:var(--muted); font-size:.86rem; margin:0; }
+    .intro-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-bottom:42px; }
+    .intro-card { background:var(--panel); border:1px solid var(--line); border-radius:16px; padding:22px; box-shadow:var(--shadow); }
+    .eyebrow { color:var(--orange); font-size:.72rem; font-weight:700; letter-spacing:.13em; text-transform:uppercase; }
+    .intro-card h2 { font-size:1.45rem; margin:8px 0; }
+    .intro-card p { color:var(--muted); margin:0; }
+    .plan { background:var(--panel); border:1px solid var(--line); border-radius:20px; padding:clamp(20px,4vw,48px); box-shadow:var(--shadow); overflow:auto; }
+    .plan h1 { font-size:clamp(2rem,4vw,3.6rem); color:var(--green); }
+    .plan h2 { font-size:2rem; color:var(--green); margin-top:2.2em; }
+    .plan h3 { font-size:1.4rem; margin-top:2em; }
+    .plan blockquote { border-left:4px solid var(--orange); padding:8px 18px; background:#fff7f1; margin:22px 0; color:#4e4138; }
+    .plan table { width:100%; min-width:760px; border-collapse:collapse; margin:20px 0 30px; font-size:.88rem; }
+    .plan th { text-align:left; background:var(--mint); color:var(--green); font-weight:700; }
+    .plan th,.plan td { padding:10px 11px; border:1px solid var(--line); vertical-align:top; }
+    .plan tr:nth-child(even) td { background:#fdfefd; }
+    .plan code { background:#eef4f0; border-radius:4px; padding:2px 5px; }
+    .plan img { max-width:100%; }
+    .footer { color:var(--muted); font-size:.9rem; margin-top:34px; padding-top:20px; border-top:1px solid var(--line); }
+    .loading { color:var(--muted); padding:20px 0; }
+    .error { color:#8f3426; background:#fff0eb; border:1px solid #edc2b5; padding:16px; border-radius:10px; }
+    #google_translate_element { position:absolute; left:-10000px; top:auto; width:1px; height:1px; overflow:hidden; }
+    @media (max-width:800px) { .hero { grid-template-columns:1fr; margin-top:42px; } .intro-grid { grid-template-columns:1fr; } nav { align-items:flex-start; } .brand { max-width:190px; } }
+    @media print { header { color:#000; background:#fff; padding-bottom:20px; } .lang-switch,.toolbar,.intro-grid { display:none; } .plan { box-shadow:none; border:0; padding:0; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="shell">
+      <nav aria-label="Primary">
+        <a class="brand notranslate" href="./">DODAMARG / BUSINESS PORTAL</a>
+        <div class="lang-switch notranslate" role="group" aria-label="Language">
+          <button class="active" type="button" data-lang="en">English</button>
+          <button type="button" data-lang="mr">मराठी</button>
+        </div>
+      </nav>
+      <div class="hero">
+        <div>
+          <p class="eyebrow notranslate">Owner research edition · 2026</p>
+          <h1 data-en="A practical business map for Dodamarg" data-mr="दोडामार्गसाठी व्यावहारिक व्यवसाय नकाशा">A practical business map for Dodamarg</h1>
+          <p data-en="A source-checked franchise and small-town business portfolio for owners comparing healthcare, services, food, solar, EV and local-demand opportunities." data-mr="आरोग्यसेवा, सेवा, खाद्यपदार्थ, सौरऊर्जा, ईव्ही आणि स्थानिक मागणीच्या संधींची स्रोत-तपासणी केलेली फ्रँचायझी आणि लघु-शहर व्यवसाय यादी.">A source-checked franchise and small-town business portfolio for owners comparing healthcare, services, food, solar, EV and local-demand opportunities.</p>
+        </div>
+        <div class="hero-card">
+          <strong>42</strong>
+          <span data-en="ranked opportunities with town-fit, popularity and profit-potential ratings" data-mr="शहर-योग्यता, लोकप्रियता आणि नफा-संभाव्यता रेटिंगसह संधी">ranked opportunities with town-fit, popularity and profit-potential ratings</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="shell">
+    <div class="toolbar">
+      <p class="translation-note" data-en="Use the switch above for Marathi. Google Translate is used for the full plan; brand figures remain subject to written confirmation." data-mr="मराठीसाठी वरील स्विच वापरा. संपूर्ण योजनेसाठी Google Translate वापरले आहे; ब्रँडची आकडेवारी लेखी पुष्टीवर अवलंबून आहे.">Use the switch above for Marathi. Google Translate is used for the full plan; brand figures remain subject to written confirmation.</p>
+      <span class="notranslate"><a href="./verification-audit.md">Verification audit</a> · <a href="./fact-check-summary.md">Fact-check summary</a></span>
+    </div>
+
+    <section class="intro-grid" aria-label="Plan highlights">
+      <article class="intro-card"><p class="eyebrow" data-en="Decision rule" data-mr="निर्णय नियम">Decision rule</p><h2 data-en="Demand before deposit" data-mr="ठेवीपूर्वी मागणी तपासा">Demand before deposit</h2><p data-en="Map existing outlets, speak to customers and validate a 30-day lead pipeline before signing." data-mr="करार करण्यापूर्वी विद्यमान दुकाने मोजा, ग्राहकांशी बोला आणि ३० दिवसांची मागणी तपासा.">Map existing outlets, speak to customers and validate a 30-day lead pipeline before signing.</p></article>
+      <article class="intro-card"><p class="eyebrow" data-en="Best first sectors" data-mr="पहिली पसंतीची क्षेत्रे">Best first sectors</p><h2 data-en="Health, services, solar" data-mr="आरोग्य, सेवा, सौरऊर्जा">Health, services, solar</h2><p data-en="Repeat needs and service income are more resilient than high-rent destination formats." data-mr="वारंवार लागणाऱ्या गरजा आणि सेवा-उत्पन्न महागड्या डेस्टिनेशन फॉरमॅटपेक्षा अधिक स्थिर असतात.">Repeat needs and service income are more resilient than high-rent destination formats.</p></article>
+      <article class="intro-card"><p class="eyebrow" data-en="Investor warning" data-mr="गुंतवणूकदार सूचना">Investor warning</p><h2 data-en="No passive-profit promise" data-mr="निष्क्रिय नफ्याची हमी नाही">No passive-profit promise</h2><p data-en="Profit-potential scores are comparisons, not forecasts. Require territory, fee and exit terms in writing." data-mr="नफा-संभाव्यता गुण तुलना आहेत, अंदाज नाहीत. क्षेत्र, शुल्क आणि बाहेर पडण्याच्या अटी लेखी घ्या.">Profit-potential scores are comparisons, not forecasts. Require territory, fee and exit terms in writing.</p></article>
+    </section>
+
+    <section class="plan" aria-labelledby="plan-title">
+      <div id="plan-content"><p class="loading">Loading the complete plan…</p></div>
+    </section>
+    <p class="footer" data-en="Prepared as an owner research aid. Confirm licences, tax, staffing, territory, supply chain, working capital and commercial terms directly with each provider before investing." data-mr="ही योजना मालकांच्या संशोधनासाठी आहे. गुंतवणुकीपूर्वी परवाने, कर, कर्मचारी, क्षेत्र, पुरवठा साखळी, कार्यरत भांडवल आणि व्यावसायिक अटी संबंधित प्रदात्याकडून थेट तपासा.">Prepared as an owner research aid. Confirm licences, tax, staffing, territory, supply chain, working capital and commercial terms directly with each provider before investing.</p>
+  </main>
+
+  <div id="google_translate_element" aria-hidden="true"></div>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    const planContent = document.getElementById('plan-content');
+    const sourceUrl = new URL('master-plan.md', window.location.href);
+    fetch(sourceUrl).then(r => { if (!r.ok) throw new Error('Could not load the plan.'); return r.text(); }).then(md => {
+      planContent.innerHTML = marked.parse(md, { mangle: false, headerIds: true });
+      const first = planContent.querySelector('h1'); if (first) first.id = 'plan-title';
+    }).catch(() => {
+      planContent.innerHTML = '<p class="error">The complete plan could not be loaded here. Open <a href="./master-plan.md">master-plan.md</a> directly.</p>';
+    });
+
+    let requestedLanguage = 'en';
+    function applyGoogleLanguage(lang) {
+      requestedLanguage = lang;
+      document.documentElement.lang = lang === 'mr' ? 'mr' : 'en';
+      document.querySelectorAll('[data-en][data-mr]').forEach(el => { el.textContent = el.dataset[lang === 'mr' ? 'mr' : 'en']; });
+      document.querySelectorAll('[data-lang]').forEach(btn => btn.classList.toggle('active', btn.dataset.lang === lang));
+      const combo = document.querySelector('.goog-te-combo');
+      if (combo) { combo.value = lang === 'mr' ? 'mr' : 'en'; combo.dispatchEvent(new Event('change')); }
+      localStorage.setItem('dodamarg-language', lang);
+    }
+    document.querySelectorAll('[data-lang]').forEach(btn => btn.addEventListener('click', () => applyGoogleLanguage(btn.dataset.lang)));
+    window.googleTranslateElementInit = function() {
+      new google.translate.TranslateElement({ pageLanguage:'en', includedLanguages:'en,mr', autoDisplay:false }, 'google_translate_element');
+      setTimeout(() => applyGoogleLanguage(requestedLanguage), 300);
+    };
+    const savedLanguage = localStorage.getItem('dodamarg-language');
+    if (savedLanguage === 'mr') applyGoogleLanguage('mr');
+  </script>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>
