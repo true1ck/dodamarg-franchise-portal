@@ -31,6 +31,33 @@
     .toolbar { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:16px; margin-bottom:28px; }
     .toolbar a { text-decoration:none; font-weight:600; }
     .translation-note { color:var(--muted); font-size:.86rem; margin:0; }
+    .opportunity-shell { margin-bottom:42px; }
+    .band-tabs { display:flex; flex-wrap:wrap; gap:8px; margin:0 0 18px; }
+    .band-tabs button { border:1px solid var(--line); background:#fff; color:var(--green); border-radius:10px; padding:12px 16px; cursor:pointer; font:600 14px inherit; }
+    .band-tabs button.active, .band-tabs button:hover { color:#fff; background:var(--green); border-color:var(--green); }
+    .controls { display:flex; flex-wrap:wrap; gap:10px; margin-bottom:18px; }
+    .controls input,.controls select { border:1px solid var(--line); border-radius:9px; background:#fff; color:var(--ink); padding:10px 12px; font:inherit; }
+    .controls input { flex:1 1 240px; }
+    .controls select { flex:0 1 220px; }
+    .owner-note { color:var(--muted); background:var(--mint); border:1px solid var(--line); border-radius:12px; padding:14px 16px; margin:0 0 20px; font-size:.9rem; }
+    .opportunity-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; }
+    .opp-card { background:var(--panel); border:1px solid var(--line); border-radius:16px; padding:20px; box-shadow:var(--shadow); }
+    .opp-card h3 { margin:7px 0 12px; color:var(--green); font-size:1.35rem; }
+    .opp-top { display:flex; align-items:flex-start; justify-content:space-between; gap:12px; }
+    .sector-chip { color:var(--orange); font-size:.72rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; }
+    .score-chip { white-space:nowrap; color:var(--green); background:var(--mint); border-radius:99px; padding:5px 9px; font-size:.75rem; font-weight:700; }
+    .opp-source { color:var(--muted); font-size:.82rem; margin-bottom:16px; }
+    .opp-source strong { color:var(--ink); }
+    .opp-economics { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; margin:12px 0 18px; }
+    .opp-economics div { background:#f7faf7; border:1px solid #e7eee9; border-radius:9px; padding:9px 10px; }
+    .opp-economics dt { color:var(--muted); font-size:.72rem; line-height:1.25; }
+    .opp-economics dd { margin:4px 0 0; font-size:.9rem; font-weight:700; }
+    .opp-card footer { display:flex; flex-wrap:wrap; gap:12px; align-items:center; border-top:1px solid var(--line); padding-top:13px; }
+    .opp-card footer a { font-size:.88rem; font-weight:700; text-decoration:none; }
+    .opp-card footer small { color:var(--muted); }
+    .empty-state { color:var(--muted); padding:30px 0; }
+    .source-plan { margin-top:32px; }
+    .source-plan summary { cursor:pointer; color:var(--green); font-weight:700; font-size:1.1rem; }
     .intro-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-bottom:42px; }
     .intro-card { background:var(--panel); border:1px solid var(--line); border-radius:16px; padding:22px; box-shadow:var(--shadow); }
     .eyebrow { color:var(--orange); font-size:.72rem; font-weight:700; letter-spacing:.13em; text-transform:uppercase; }
@@ -72,7 +99,7 @@
           <p data-en="A source-checked franchise and small-town business portfolio for owners comparing healthcare, services, food, solar, EV and local-demand opportunities." data-mr="आरोग्यसेवा, सेवा, खाद्यपदार्थ, सौरऊर्जा, ईव्ही आणि स्थानिक मागणीच्या संधींची स्रोत-तपासणी केलेली फ्रँचायझी आणि लघु-शहर व्यवसाय यादी.">A source-checked franchise and small-town business portfolio for owners comparing healthcare, services, food, solar, EV and local-demand opportunities.</p>
         </div>
         <div class="hero-card">
-          <strong>42</strong>
+          <strong>45</strong>
           <span data-en="ranked opportunities with town-fit, popularity and profit-potential ratings" data-mr="शहर-योग्यता, लोकप्रियता आणि नफा-संभाव्यता रेटिंगसह संधी">ranked opportunities with town-fit, popularity and profit-potential ratings</span>
         </div>
       </div>
@@ -91,13 +118,23 @@
       <article class="intro-card"><p class="eyebrow" data-en="Investor warning" data-mr="गुंतवणूकदार सूचना">Investor warning</p><h2 data-en="No passive-profit promise" data-mr="निष्क्रिय नफ्याची हमी नाही">No passive-profit promise</h2><p data-en="Profit-potential scores are comparisons, not forecasts. Require territory, fee and exit terms in writing." data-mr="नफा-संभाव्यता गुण तुलना आहेत, अंदाज नाहीत. क्षेत्र, शुल्क आणि बाहेर पडण्याच्या अटी लेखी घ्या.">Profit-potential scores are comparisons, not forecasts. Require territory, fee and exit terms in writing.</p></article>
     </section>
 
-    <section class="plan" aria-labelledby="plan-title">
-      <div id="plan-content"><p class="loading">Loading the complete plan…</p></div>
+    <section class="opportunity-shell" aria-labelledby="opportunity-title">
+      <div class="toolbar"><div><p class="eyebrow" data-en="Owner economics" data-mr="मालकांचे अर्थशास्त्र">Owner economics</p><h2 id="opportunity-title" data-en="Compare the three investment bands" data-mr="तीन गुंतवणूक श्रेणींची तुलना करा">Compare the three investment bands</h2></div><strong id="opportunity-count" class="notranslate"></strong></div>
+      <div class="band-tabs" role="tablist" aria-label="Investment bands">
+        <button class="active" type="button" data-band="under10" role="tab" aria-selected="true" data-en="Below ₹10L" data-mr="₹१० लाखांखाली">Below ₹10L</button>
+        <button type="button" data-band="10to25" role="tab" aria-selected="false" data-en="₹10–25L" data-mr="₹१०–२५ लाख">₹10–25L</button>
+        <button type="button" data-band="25to50" role="tab" aria-selected="false" data-en="₹25–50L" data-mr="₹२५–५० लाख">₹25–50L</button>
+      </div>
+      <div class="controls notranslate"><input id="opportunity-search" type="search" placeholder="Search brand or sector…" aria-label="Search opportunities"><select id="opportunity-sector" aria-label="Filter by sector"><option value="">All sectors</option></select><select id="opportunity-sort" aria-label="Sort opportunities"><option value="fit">Best town fit</option><option value="profit">Profit potential</option><option value="popularity">Popularity</option></select></div>
+      <p class="owner-note" data-en="Owner without a job: figures assume the owner works daily and owner salary is not charged. Owner with a job: figures include the stated staff payroll and normal rent/utilities, but exclude loans, tax, owner salary and a full-time manager. The margin cells are illustrative operating-surplus ranges by sector, not brand promises. This is a planning model—not a guaranteed margin or passive-income promise." data-mr="नोकरी नसलेला मालक: मालक दररोज काम करतो आणि मालकाचा पगार खर्चात धरलेला नाही. नोकरी असलेला मालक: दिलेला कर्मचारी पगार, भाडे आणि वीज खर्चात धरले आहेत; कर्ज, कर, मालकाचा पगार आणि पूर्णवेळ व्यवस्थापक धरलेला नाही. मार्जिनचे आकडे क्षेत्रानुसार अंदाजे ऑपरेटिंग-सर्प्लस आहेत, ब्रँडची हमी नाही. हा नियोजन अंदाज आहे—नफ्याची किंवा निष्क्रिय उत्पन्नाची हमी नाही.">Owner without a job: figures assume the owner works daily and owner salary is not charged. Owner with a job: figures include the stated staff payroll and normal rent/utilities, but exclude loans, tax, owner salary and a full-time manager. The margin cells are illustrative operating-surplus ranges by sector, not brand promises. This is a planning model—not a guaranteed margin or passive-income promise.</p>
+      <div id="opportunity-grid" class="opportunity-grid"></div>
     </section>
+    <details class="source-plan"><summary data-en="Open the complete source plan, verification audit and fact-check notes" data-mr="संपूर्ण मूळ योजना, पडताळणी ऑडिट आणि तथ्य-तपासणी उघडा">Open the complete source plan, verification audit and fact-check notes</summary><section class="plan" aria-labelledby="plan-title"><div id="plan-content"><p class="loading">Loading the complete plan…</p></div></section></details>
     <p class="footer" data-en="Prepared as an owner research aid. Confirm licences, tax, staffing, territory, supply chain, working capital and commercial terms directly with each provider before investing." data-mr="ही योजना मालकांच्या संशोधनासाठी आहे. गुंतवणुकीपूर्वी परवाने, कर, कर्मचारी, क्षेत्र, पुरवठा साखळी, कार्यरत भांडवल आणि व्यावसायिक अटी संबंधित प्रदात्याकडून थेट तपासा.">Prepared as an owner research aid. Confirm licences, tax, staffing, territory, supply chain, working capital and commercial terms directly with each provider before investing.</p>
   </main>
 
   <div id="google_translate_element" aria-hidden="true"></div>
+  <script src="./opportunities.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script>
     const planContent = document.getElementById('plan-content');
@@ -108,6 +145,52 @@
     }).catch(() => {
       planContent.innerHTML = '<p class="error">The complete plan could not be loaded here. Open <a href="./master-plan.md">master-plan.md</a> directly.</p>';
     });
+
+    const bandLabels = { under10:'Below ₹10L', '10to25':'₹10–25L', '25to50':'₹25–50L' };
+    let activeBand = 'under10';
+    const searchBox = document.getElementById('opportunity-search');
+    const sectorBox = document.getElementById('opportunity-sector');
+    const sortBox = document.getElementById('opportunity-sort');
+    const grid = document.getElementById('opportunity-grid');
+    const count = document.getElementById('opportunity-count');
+    const marginBySector = {
+      'Healthcare':['15–30%','5–18%'],'Food & Dairy':['12–25%','3–15%'],'Food & Beverage':['15–30%','2–14%'],
+      'Digital / Logistics':['10–25%','2–15%'],'Digital / Financial':['25–60%','5–30%'],'Financial':['30–70%','5–25%'],
+      'Solar / Electrical':['10–25%','3–14%'],'Telecom / Service':['10–25%','0–12%'],'Education':['25–55%','5–30%'],
+      'EV / Mobility':['8–18%','0–10%'],'EV Infrastructure':['5–20%','negative–10%'],'Grocery / FMCG':['4–12%','1–7%'],
+      'FMCG / Wellness':['8–18%','2–10%'],'Laundry':['12–25%','0–12%'],'Print / B2B':['15–35%','3–18%'],
+      'Optical':['20–40%','5–22%'],'Salon':['20–40%','0–20%'],'Beauty / Wellness':['20–40%','0–20%'],
+      'Fitness':['20–35%','0–15%'],'Apparel':['12–25%','negative–12%'],'Footwear':['12–25%','negative–12%']
+    };
+    const escapeHtml = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+    [...new Set(window.opportunityData.map(o => o.sector))].sort().forEach(sector => { const opt = document.createElement('option'); opt.value = sector; opt.textContent = sector; sectorBox.appendChild(opt); });
+    function renderOpportunities() {
+      const query = searchBox.value.trim().toLowerCase();
+      const sector = sectorBox.value;
+      let rows = window.opportunityData.filter(o => o.band === activeBand && (!sector || o.sector === sector) && (!query || `${o.name} ${o.sector} ${o.source}`.toLowerCase().includes(query)));
+      rows.sort((a,b) => (b[sortBox.value === 'profit' ? 'fit' : sortBox.value] || 0) - (a[sortBox.value === 'profit' ? 'fit' : sortBox.value] || 0));
+      count.textContent = `${rows.length} opportunities`;
+      grid.innerHTML = rows.length ? rows.map(o => `<article class="opp-card">
+        <div class="opp-top"><div><span class="sector-chip">${escapeHtml(o.sector)}</span><h3>${escapeHtml(o.name)}</h3></div><span class="score-chip">Town fit ${o.fit}/5</span></div>
+        <p class="opp-source"><strong>${escapeHtml(o.confidence)}.</strong> ${escapeHtml(o.source)}</p>
+        <dl class="opp-economics">
+          <div><dt>Price / setup bracket</dt><dd>${escapeHtml(o.capital)}</dd></div>
+          <div><dt>Staff / salary assumption</dt><dd>${escapeHtml(o.staff)}</dd></div>
+          <div><dt>Fixed monthly cost — owner works</dt><dd>${escapeHtml(o.fixedSelf)}</dd></div>
+          <div><dt>Fixed monthly cost — owner has job</dt><dd>${escapeHtml(o.fixedHired)}</dd></div>
+          <div><dt>Estimated monthly surplus — owner works</dt><dd>${escapeHtml(o.selfProfit)}</dd></div>
+          <div><dt>Estimated monthly surplus — owner has job</dt><dd>${escapeHtml(o.hiredProfit)}</dd></div>
+          <div><dt>Illustrative margin — owner works</dt><dd>${marginBySector[o.sector]?.[0] || 'Quote dependent'}</dd></div>
+          <div><dt>Illustrative margin — owner has job</dt><dd>${marginBySector[o.sector]?.[1] || 'Quote dependent'}</dd></div>
+          <div><dt>Payback — owner works</dt><dd>${escapeHtml(o.selfPayback)}</dd></div>
+          <div><dt>Payback — owner has job</dt><dd>${escapeHtml(o.hiredPayback)}</dd></div>
+        </dl>
+        <footer><a href="${escapeHtml(o.link)}" target="_blank" rel="noopener noreferrer">Open application / enquiry ↗</a><small>Popularity ${o.popularity}/5 · modelled ranges</small></footer>
+      </article>`).join('') : '<p class="empty-state">No opportunities match this filter.</p>';
+    }
+    document.querySelectorAll('[data-band]').forEach(btn => btn.addEventListener('click', () => { activeBand = btn.dataset.band; document.querySelectorAll('[data-band]').forEach(b => { b.classList.toggle('active', b === btn); b.setAttribute('aria-selected', b === btn ? 'true' : 'false'); }); renderOpportunities(); }));
+    [searchBox, sectorBox, sortBox].forEach(el => el.addEventListener('input', renderOpportunities));
+    renderOpportunities();
 
     let requestedLanguage = 'en';
     function applyGoogleLanguage(lang) {
