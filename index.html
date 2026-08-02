@@ -36,11 +36,13 @@
     .band-tabs button { border:1px solid var(--line); background:#fff; color:var(--green); border-radius:10px; padding:12px 16px; cursor:pointer; font:600 14px inherit; }
     .band-tabs button.active, .band-tabs button:hover { color:#fff; background:var(--green); border-color:var(--green); }
     .controls { display:flex; flex-wrap:wrap; gap:10px; margin-bottom:18px; }
-    .controls input,.controls select { border:1px solid var(--line); border-radius:9px; background:#fff; color:var(--ink); padding:10px 12px; font:inherit; }
-    .controls input { flex:1 1 240px; }
-    .controls select { flex:0 1 220px; }
+    .controls input,.controls select { border:1px solid var(--line); border-radius:9px; background:#fff; color:var(--ink); padding:12px 14px; font:inherit; min-height:44px; }
+    .controls input { flex:1 1 100%; }
+    .controls select { flex:0 1 100%; }
+    @media (min-width:640px) { .controls input { flex:1 1 240px; } .controls select { flex:0 1 auto; } }
     .owner-note { color:var(--muted); background:var(--mint); border:1px solid var(--line); border-radius:12px; padding:14px 16px; margin:0 0 20px; font-size:.9rem; }
-    .opportunity-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; }
+    .opportunity-grid { display:grid; grid-template-columns:1fr; gap:18px; }
+    @media (min-width:640px) { .opportunity-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
     .opp-card { background:var(--panel); border:1px solid var(--line); border-radius:16px; padding:20px; box-shadow:var(--shadow); }
     .opp-card h3 { margin:7px 0 12px; color:var(--green); font-size:1.35rem; }
     .opp-top { display:flex; align-items:flex-start; justify-content:space-between; gap:12px; }
@@ -48,7 +50,8 @@
     .score-chip { white-space:nowrap; color:var(--green); background:var(--mint); border-radius:99px; padding:5px 9px; font-size:.75rem; font-weight:700; }
     .opp-source { color:var(--muted); font-size:.82rem; margin-bottom:16px; }
     .opp-source strong { color:var(--ink); }
-    .opp-economics { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; margin:12px 0 18px; }
+    .opp-economics { display:grid; grid-template-columns:1fr; gap:8px; margin:12px 0 18px; }
+    @media (min-width:640px) { .opp-economics { grid-template-columns:repeat(2,minmax(0,1fr)); } }
     .opp-economics div { background:#f7faf7; border:1px solid #e7eee9; border-radius:9px; padding:9px 10px; }
     .opp-economics dt { color:var(--muted); font-size:.72rem; line-height:1.25; }
     .opp-economics dd { margin:4px 0 0; font-size:.9rem; font-weight:700; }
@@ -63,7 +66,8 @@
     .empty-state { color:var(--muted); padding:30px 0; }
     .source-plan { margin-top:32px; }
     .source-plan summary { cursor:pointer; color:var(--green); font-weight:700; font-size:1.1rem; }
-    .intro-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-bottom:42px; }
+    .intro-grid { display:grid; grid-template-columns:1fr; gap:16px; margin-bottom:42px; }
+    @media (min-width:768px) { .intro-grid { grid-template-columns:repeat(3,1fr); } }
     .intro-card { background:var(--panel); border:1px solid var(--line); border-radius:16px; padding:22px; box-shadow:var(--shadow); }
     .eyebrow { color:var(--orange); font-size:.72rem; font-weight:700; letter-spacing:.13em; text-transform:uppercase; }
     .intro-card h2 { font-size:1.45rem; margin:8px 0; }
@@ -83,7 +87,35 @@
     .loading { color:var(--muted); padding:20px 0; }
     .error { color:#8f3426; background:#fff0eb; border:1px solid #edc2b5; padding:16px; border-radius:10px; }
     #google_translate_element { position:absolute; left:-10000px; top:auto; width:1px; height:1px; overflow:hidden; }
-    @media (max-width:800px) { .hero { grid-template-columns:1fr; margin-top:42px; } .intro-grid { grid-template-columns:1fr; } nav { align-items:flex-start; } .brand { max-width:190px; } }
+    @media (max-width:640px) {
+      body { font-size:15px; }
+      h1 { font-size:clamp(1.75rem,5vw,2.5rem); }
+      .shell { width:calc(100% - 16px); }
+      header { padding:14px 0 48px; }
+      main { padding:24px 0 48px; }
+      .hero { margin-top:28px; }
+      .hero-card { padding:18px; }
+      .hero-card strong { font-size:1.75rem; }
+      .toolbar { flex-direction:column; align-items:flex-start; gap:12px; }
+      nav { align-items:flex-start; gap:12px; }
+      .brand { font-size:0.9rem; max-width:160px; line-height:1.3; }
+      .opp-card { padding:16px; }
+      .opp-card h3 { font-size:1.15rem; margin:6px 0 10px; }
+      .intro-card { padding:16px; }
+      .intro-card h2 { font-size:1.2rem; }
+      .band-tabs { gap:6px; }
+      .band-tabs button { padding:10px 14px; font-size:13px; }
+      .opp-economics div { padding:8px 9px; }
+      .opp-economics dt { font-size:0.68rem; }
+      .opp-economics dd { font-size:0.85rem; }
+      .score-chip { font-size:0.7rem; padding:4px 8px; }
+      .sector-chip { font-size:0.68rem; }
+      .owner-note { padding:12px 14px; font-size:0.85rem; }
+      .plan { padding:16px; }
+      .plan h1 { font-size:clamp(1.5rem,4vw,2.2rem); }
+      .plan h2 { font-size:1.4rem; }
+      .plan table { font-size:0.8rem; min-width:100%; }
+    }
     @media print { header { color:#000; background:#fff; padding-bottom:20px; } .lang-switch,.toolbar,.intro-grid { display:none; } .plan { box-shadow:none; border:0; padding:0; } }
   </style>
 </head>
