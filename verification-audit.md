@@ -1,4 +1,4 @@
-# Dodamarg Franchise Business Investment Master Plan — Verification Audit
+# Tier 2/3 India Franchise Business Investment Master Plan — Verification Audit
 
 I checked the 100-row opportunity list against official brand pages first, then used reputable public articles only when the brand page didn’t publish enough detail.
 
@@ -217,3 +217,26 @@ Treat the sheet as a brainstorming draft, not a factual market list. If you want
 - keep only the brands that have a real public partner/franchise path,
 - replace every mismatched investment figure with the public range, and
 - flag anything that should be deleted because it is not a franchise model at all.
+
+---
+
+## Batch 2 — August 2026 expansion (87 new brands added, 27 checked and excluded)
+
+A second deep-verification pass mined the remaining candidate names from `master-plan.md`'s Dataset 1/2 idea banks plus additional well-known Indian franchise brands, across 10 themed batches (optical/salon, fitness, solar/EV, grocery/apparel/footwear, pet care/vending/home services, QSR/cloud kitchen, tea/dairy/beverage, logistics, education, financial/diagnostics/agriculture). Every added row has an official-source link; `confidence` and `outletsBasis` fields on each row disclose whether the capital and outlet-count figures are brand-official, third-party/estimated, or undisclosed. Numeric payback is shown only where the brand's own capital figure is firm — see the `Quote dependent` rows for everything else.
+
+**27 candidates were checked and excluded** as not being a real, currently-verifiable franchise/partner program (not a rejection of the brand — just no public capex-and-terms route a first-time applicant could act on):
+
+- **Fitness (14):** FitBuddy Gym, O2 Gym, Anytime Fitness, Snap Fitness, Gold's Gym, Burn Gym, Skale Fitness (all real chains, but real capital is 2–7x this portal's ₹50L ceiling with no compact India format), Gym99, SARVA Yoga, Zorba/Talwalkars Yoga, Akshar Yoga Kendra, F45 Training, CrossFit (not a franchise per their own FAQ), Kryolife Fitness
+- **Solar/EV (2):** Hero Electric (confirmed in NCLT liquidation, Feb 2026), Su-Kam (dealer-count claims unverifiable/pre-collapse, no live dealer-application page found)
+- **Grocery/Apparel/Footwear (2):** JD Mart (unverifiable brand identity), Reliance Smart (landlord/property-partnership model only, not a franchisee route)
+- **Pet Care/Vending/Home Services (3):** Petoly (no published investment terms), Housejoy (platform marketplace, not a location-based franchise), Urban Company (individual gig-partner model, not a shop franchise)
+- **QSR/Cloud Kitchen (1):** Smaaash (acquired by Nazara Technologies June 2025; no published franchisee-recruitment program post-acquisition)
+- **Logistics (3):** Shiprocket (referral/commission program, not a franchise), FedEx, DHL (no standardized India franchise/counter-partner program found for either)
+- **Education (2):** Aloha Mind Math (USD-priced, minimal active India franchise presence), ADA/Achievers Destination Academy (conflicting, unverifiable capital and payback claims)
+
+**Flagged for extra caution** (included, but read the row's `confidence`/`source` text before acting):
+- **Okinawa Autotech** — official dealer page is live with firm investment brackets, but FAME-II subsidy de-registration (Oct 2023), an 87% FY24 revenue decline, and only 1,266 units sold nationally in early 2025 make this a business-viability risk independent of the franchise terms themselves.
+- **Zunsolar** (formerly ZunRoof) — dealer-count figure traced through trade-press coverage of a company statement, not a directly-fetched primary source.
+- **Ather Energy** — official retail-partnership page returned HTTP 403 to automated fetch; capital figure is third-party sourced.
+- **Talwalkars HI-FI** — no official talwalkars.com franchise page found; capital is third-party/public-listing sourced only.
+- **AgroStar** — no official franchise/distributor partner program documentation published; outlet count is an estimate from public retail presence only.

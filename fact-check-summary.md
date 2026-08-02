@@ -1,6 +1,6 @@
 # Franchise Investment Plan Fact Check
 
-This is a source-based audit of the most material claims in `Dodamarg Franchise Business Investment Master Plan.md`.
+This is a source-based audit of the most material claims in `Tier 2/3 India Franchise Business Investment Master Plan.md`.
 
 ## Bottom line
 

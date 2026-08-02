@@ -1,16 +1,16 @@
-# Dodamarg Franchise Business Investment Master Plan
+# Tier 2/3 India Franchise Business Investment Master Plan
 
 ---
 
 ## Executive Summary & Market Profile
 
-* **Target Location:** Dodamarg, Sindhudurg District, Maharashtra (Goa-Maharashtra Border).
-* **Commercial Rent (Dodamarg Market):**
-  * Small Kiosk / Shop (100–250 sq. ft.): ₹7,000 – ₹12,000 / month
-  * Standard Showroom / Store (300–600 sq. ft.): ₹15,000 – ₹25,000 / month
-* **Labor Costs (Dodamarg Market):**
-  * Manager / Supervisor: ₹12,000 – ₹15,000 / month
-  * Unskilled / Semi-skilled Helper / Courier Boy: ₹8,000 – ₹10,000 / month
+* **Target Location:** Tier 2 and Tier 3 towns and small cities across India (district headquarters, taluka towns and similar-scale markets — this portal no longer models one specific town; use the ranges below and adjust toward the low end for a smaller Tier 3 town or the high end for a larger Tier 2 city).
+* **Commercial Rent (Tier 2/3 Market):**
+  * Small Kiosk / Shop (100–250 sq. ft.): ₹8,000 – ₹25,000 / month
+  * Standard Showroom / Store (300–600 sq. ft.): ₹18,000 – ₹50,000 / month
+* **Labor Costs (Tier 2/3 Market):**
+  * Manager / Supervisor: ₹13,000 – ₹22,000 / month
+  * Unskilled / Semi-skilled Helper / Courier Boy: ₹9,000 – ₹14,000 / month
 * **Lenskart Franchise Reality Check:**
   * Minimum Setup Cost: ₹15 Lakhs – ₹25 Lakhs (Compact) | ₹30 Lakhs – ₹50 Lakhs (Standard)
   * One-time Franchise Fee: ₹1.5 Lakhs – ₹2.36 Lakhs
@@ -23,7 +23,7 @@
 
 ### The Hands-Off Investor Reality Check
 When operating as a business investor (not working daily behind the counter), labor costs increase significantly:
-* **Minimum Fixed Overhead:** ₹40,000 – ₹55,000 / month (1 Manager + 1–2 Staff + Shop Rent + Utilities).
+* **Minimum Fixed Overhead:** ₹50,000 – ₹80,000 / month (1 Manager + 1–2 Staff + Shop Rent + Utilities).
 * **Low-Margin / High-Labor Businesses To Avoid:** Courier agencies, fast-food counters, and low-ticket logistics. Fixed staff costs quickly devour profit margins in smaller markets.
 * **Best Models for Investors:** FOCO (Franchise Owned, Company Operated), High-Ticket B2B Dealerships (Solar/Agri), High-Markup Retail (Optical/Footwear), and Automated Infrastructure (EV Charging/Water ATMs).
 
@@ -52,7 +52,7 @@ When operating as a business investor (not working daily behind the counter), la
 
 ## Dataset 1: 100 Franchise Opportunities Under ₹5 Lakhs
 
-*(Note: Calculated based on baseline shop operations in Tier 4 towns like Dodamarg.)*
+*(Note: Calculated based on baseline shop operations in Tier 2/3 towns.)*
 
 | # | Franchise Brand Name | Domain | Total Setup Cost | Owner vs. Franchise Role | Est. Fixed Monthly Expense | Est. Net Monthly Gain | Est. Break-Even |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -267,11 +267,11 @@ When operating as a business investor (not working daily behind the counter), la
 | **100**| **Oven Story Cloud** | F&B Delivery | ₹10.0 Lakhs | Owner + 2 Cooks. Delivery-only pizza hub. | ₹40,000 | ₹50,000 - ₹90,000 | 12 - 18 Mos |
 
 ---
-## 2026 Owner-Ready Replacement Portfolio — Dodamarg
+## 2026 Owner-Ready Replacement Portfolio — Tier 2/3 India
 
-> **Use this section for decisions.** The two original 100-row tables above are idea banks, not approved financial forecasts: many of their investment, royalty, staffing and payback figures were not supported by current public information. See the linked [verification audit](Dodamarg%20Franchise%20Business%20Investment%20Master%20Plan%20-%20Verification%20Audit.md) before contacting any brand.
+> **Use this section for decisions.** The two original 100-row tables above are idea banks, not approved financial forecasts: many of their investment, royalty, staffing and payback figures were not supported by current public information. See the linked [verification audit](verification-audit.md) before contacting any brand.
 >
-> This replacement portfolio is designed for a small, price-sensitive border-town market: repeat needs, low fixed payroll, an owner working in the business, and a service radius beyond only Dodamarg town. **Profit potential is a comparative rating, not a promise of income.** “Quote required” means the company has a public partner route but does not publish a reliable all-in cost.
+> This replacement portfolio is designed for a price-sensitive Tier 2/3 market: repeat needs, moderate fixed payroll, an owner working in the business, and a service radius beyond just the town centre. **Profit potential is a comparative rating, not a promise of income.** “Quote required” means the company has a public partner route but does not publish a reliable all-in cost.
 
 ### Scorecard
 
@@ -284,7 +284,7 @@ When operating as a business investor (not working daily behind the counter), la
 
 ### Priority A — start diligence first
 
-| # | Opportunity / sector | Public route and indicative entry point | Town fit | Popularity | Profit potential | Owner role | Why it belongs in Dodamarg / non-negotiable check |
+| # | Opportunity / sector | Public route and indicative entry point | Town fit | Popularity | Profit potential | Owner role | Why it belongs in a Tier 2/3 town / non-negotiable check |
 | :-- | :-- | :-- | :--: | :--: | :--: | :-- | :-- |
 | 1 | [PMBJK / Jan Aushadhi Kendra](https://janaushadhi.gov.in/apply-for-kendra) — generic pharmacy | Government-supported retail route; qualified pharmacist and drug licence are required. PMBI states a purchase-linked incentive up to ₹20,000/month, subject to conditions. | 5 | 5 | 4 | Hands-on / pharmacist-led | Essential repeat demand. First map existing pharmacies and confirm pharmacist, licence, location and working capital. |
 | 2 | [Dr Lal PathLabs collection centre](https://www.lalpathlabs.com/business-partnership/become-a-franchise) | Official minimum investment: about ₹3–4L; about 200–250 sq ft ground floor listed. | 5 | 5 | 4 | Hands-on; trained collection workflow | Strong if local doctors and sample logistics support it. Do not open without written route/pick-up confirmation. |
@@ -316,7 +316,7 @@ When operating as a business investor (not working daily behind the counter), la
 | 23 | [DTDC partner](https://www.dtdc.in/) | Courier network; ask regional office for current franchise/booking-right availability. | 4 | 5 | 2 | Combine with print, packing, bill-pay and India Post—courier alone has thin margins. |
 | 24 | E-commerce last-mile service contractor | Not a conventional franchise; explore only through official regional procurement/onboarding. | 3 | 4 | 2 | A written volume commitment and the ability to recruit/manage riders. |
 | 25 | [CSC / Digital Seva centre](https://digitalseva.csc.gov.in/) | Government digital-service operator route; live intake/eligibility must be checked at application. | 5 | 5 | 3 | Combine with printing, scanning, insurance, ticketing and assisted digital services. |
-| 26 | [Tally Education authorised partner](https://tallysolutions.com/education/) | Education/authorised-partner route; quote required. | 3 | 4 | 3 | At least 25–30 realistic annual learners from Dodamarg and surrounding villages. |
+| 26 | [Tally Education authorised partner](https://tallysolutions.com/education/) | Education/authorised-partner route; quote required. | 3 | 4 | 3 | At least 25–30 realistic annual learners from the town and surrounding villages. |
 | 27 | [SIP Abacus](https://www.sipacademyindia.com/) | Learning-centre franchise; terms quote required. | 3 | 3 | 3 | Owner can teach/market personally and enrol enough children before renting a centre. |
 | 28 | [UCMAS](https://www.ucmas.in/) | Abacus-centre partner route; terms quote required. | 3 | 4 | 3 | Same local-child enrolment test; do not carry a full-time teacher before batches form. |
 | 29 | Local English/computer-skills centre | Independent model often safer than an unverified micro-franchise. | 4 | 2 | 3 | A recognised curriculum, good trainer and fee collection discipline. |
